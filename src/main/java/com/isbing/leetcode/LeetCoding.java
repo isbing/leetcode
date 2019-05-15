@@ -11,4 +11,5 @@ public abstract class LeetCoding {
 	public abstract int[] twoSum(int[] nums, int target);//1
 	public abstract int[] twoSumV2(int[] numbers, int target);//167
 	public abstract boolean isSymmetric(TreeNode root);//101
+	public abstract int singleNumber(int[] nums);//136
 }
