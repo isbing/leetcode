@@ -15,6 +15,9 @@ public class LeetcodeApplication {
 	}
 
 
+
+
+
 	/**
 	 * 异或的运算方法是一个二进制运算：
 	 * 1^1=0
