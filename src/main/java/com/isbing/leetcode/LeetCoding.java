@@ -28,7 +28,9 @@ public abstract class LeetCoding {
 	public abstract int maxDepth(TreeNode root);//104 二叉树的最大深度
 	public abstract int majorityElement(int[] nums);//169 求众数 数组中出现次数大于 ⌊ n/2 ⌋ 的元素。
 	public abstract List<List<Integer>> levelOrder(TreeNode root);//102 二叉树的层序遍历
-
+	public abstract List<List<Integer>> levelOrderBottom(TreeNode root);//107 二叉树的逆层序遍历
+	public abstract int minDepth(TreeNode root);//111 二叉树的最小深度
+	public abstract List<Integer> inorderTraversal(TreeNode root);//94 二叉树的中序遍历
 
 
 }
