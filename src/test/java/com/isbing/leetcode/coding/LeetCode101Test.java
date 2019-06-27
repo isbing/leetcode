@@ -24,6 +24,24 @@ public class LeetCode101Test {
 
 	}
 
+	public boolean isSymmetric(TreeNode root) {
+		if(root == null){
+			return true;
+		}
+		return diGui(root.left,root.right);
+	}
+
+	private boolean diGui(TreeNode left, TreeNode right) {
+		if(left == null && right == null){
+			return true;
+		}
+		if((left == null && right != null) || (left != null && right == null)){
+			return false;
+		}
+		// 递归需要比较的是  左的左 要跟 右的右 比较，左的右 要跟 右的左 比较
+		return left.val == right.val && diGui(left.left,right.right) && diGui(left.right,right.left);
+	}
+
 	public boolean isSymmetricDie(TreeNode root) {
 		if(root == null){
 			return true;
