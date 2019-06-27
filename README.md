@@ -1,4 +1,4 @@
-# leetCode刷题笔记
+# LeetCode刷题笔记
 
 由于本人算法能力实在堪忧，故记录刷题过程中的心得体会。
 
@@ -6,5 +6,5 @@
 
 有事没事就刷上这么一两道，龟速更新中，努力提高自己的算法水平。这个笔记一方面给自己提供一个整理，方便后续的复习查阅，另一方面如果能给各位带来一些帮助那就再好不过了。
 
-[**LeetCode-125**](https://github.com/jrhu05/leetCode/blob/master/problems/LeetCode-001TwoSum.md)
+[**LeetCode125-判断回文串**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode125.md)
 
