@@ -18,7 +18,10 @@
 
 [**LeetCode136-只出现一次的数字**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode136.md)
 
+[**LeetCode240-搜索二维矩阵**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode240.md)
 
+[**LeetCode100-二叉树是否相同**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode100.md)
 
+[**LeetCode206-单链表反转**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode206.md)
 
 
