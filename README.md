@@ -24,4 +24,11 @@
 
 [**LeetCode206-单链表反转**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode206.md)
 
+[**LeetCode46-全排列**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode46.md)
+
+[**LeetCode9-回文数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode9.md)
+
+
+
+
 
