@@ -28,7 +28,12 @@
 
 [**LeetCode9-回文数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode9.md)
 
+[**LeetCode234-回文链表**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode234.md)
 
+[**LeetCode88-合并两个有序数组**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode88.md)
 
+[**LeetCode53-最大连续子序和**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode53.md)
+
+[**LeetCode21-合并两个有序链表**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode21.md)
 
 
