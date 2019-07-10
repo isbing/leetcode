@@ -13,7 +13,7 @@ public class LeetcodeApplication {
 
 
 	public static void main(String[] args) {
-		consumeSipderQueue();
+		//consumeSipderQueue();
 		SpringApplication.run(LeetcodeApplication.class, args);
 	}
 

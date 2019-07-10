@@ -36,4 +36,6 @@
 
 [**LeetCode21-合并两个有序链表**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode21.md)
 
+[**LeetCode141-链表是否有环**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode141.md)
 
+[**LeetCode104-二叉树的最大深度**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode104.md)
