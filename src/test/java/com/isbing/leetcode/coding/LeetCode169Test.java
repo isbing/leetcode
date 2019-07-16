@@ -24,7 +24,7 @@ public class LeetCode169Test {
 		System.out.println(majorityElementV2(nums));
 	}
 
-	// 时间0(N)  空间0(N)
+	// 时间0(N) 空间0(N)
 	public int majorityElement(int[] nums) {
 		if(nums == null) return 0;
 		Map<Integer,Integer> map = new HashMap<>();
