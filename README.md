@@ -48,8 +48,17 @@
 
 [**LeetCode110-二叉树是否平衡**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode110.md)
 
+[**LeetCode226-二叉树的翻转**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode226.md)
+
 [**LeetCode94-二叉树的中序遍历**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode94.md)
 
 [**LeetCode263-丑数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode263.md)
 
 [**LeetCode169-数组中出现次数大于⌊n/2⌋的元素**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode169.md)
+
+[**LeetCode2-链表中的两数相加**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode2.md)
+
+[**LeetCode203-单链表删除指定节点**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode203.md)
+
+
+
