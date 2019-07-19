@@ -62,4 +62,5 @@
 
 [**LeetCode3-无重复字符的最长子串**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode3.md)
 
+[**LeetCode70-爬楼梯的方法**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode70.md)
 
