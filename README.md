@@ -65,3 +65,10 @@
 [**LeetCode70-爬楼梯的方法**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode70.md)
 
 [**LeetCode5-最长回文子串**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode5.md)
+
+[**LeetCode647-回文子串的个数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode647.md)
+
+[**LeetCode704-二分查找**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode704.md)
+
+[**LeetCode50-数值的N次方**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode50.md)
+
