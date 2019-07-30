@@ -72,3 +72,10 @@
 
 [**LeetCode50-数值的N次方**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode50.md)
 
+[**LeetCode35-二分搜索插入位置**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode35.md)
+
+[**LeetCode74-二维数组的二分查找**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode74.md)
+
+
+
+
