@@ -78,5 +78,6 @@
 
 [**LeetCode73-矩阵置0**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode73.md)
 
+[**LeetCode268-缺失的数字**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode268.md)
 
 
