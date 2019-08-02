@@ -86,8 +86,11 @@
 
 [**LeetCode191-二进制中1的个数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode191.md)
 
+[**LeetCode19-删除单链表倒数第K个节点**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode19.md)
 
+[**LeetCode384-随机洗牌**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode384.md)
 
+[**LeetCode83-有序链表中去重**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode83.md)
 
 
 
