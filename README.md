@@ -80,4 +80,14 @@
 
 [**LeetCode268-缺失的数字**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode268.md)
 
+[**LeetCode20-有效的括号**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode20.md)
+
+[**LeetCode22-括号的合法排列**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode22.md)
+
+[**LeetCode191-二进制中1的个数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode191.md)
+
+
+
+
+
 
