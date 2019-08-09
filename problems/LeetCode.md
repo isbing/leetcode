@@ -1,6 +1,6 @@
 ---
 title: LeetCode
-date: 2019-07-29
+date: 2019-07-31
 categories: 算法小白的刷题之路
 tags: LeetCode
 ---

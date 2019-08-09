@@ -92,5 +92,8 @@
 
 [**LeetCode83-有序链表中去重**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode83.md)
 
+[**LeetCode82-有序链表中去重V2**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode82.md)
+
+[**LeetCode15-三数之和**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode15.md)
 
 
