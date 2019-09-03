@@ -96,4 +96,20 @@
 
 [**LeetCode15-三数之和**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode15.md)
 
+[**LeetCode121-买卖股票的最佳时机**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode121.md)
+
+[**LeetCode64-最小路径和**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode64.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
