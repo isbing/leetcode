@@ -100,7 +100,9 @@
 
 [**LeetCode64-最小路径和**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode64.md)
 
+[**LeetCode215-数组中第K大的元素**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode215.md)
 
+[**LeetCode540-有序数组的单身数字**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode540.md)
 
 
 
