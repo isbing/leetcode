@@ -1,43 +1,11 @@
----
-title: LeetCode125-判断回文串
-date: 2020-03-06
-categories: 算法小白的刷题之路
-tags: LeetCode
----
+package com.isbing.leetcode.coding;
 
-## 题目
-
-给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
-
-说明：本题中，我们将空字符串定义为有效的回文串。
-
-示例 1:
-
-输入: "A man, a plan, a canal: Panama"
-
-输出: true
-
-示例 2:
-
-输入: "race a car"
-
-输出: false
-
-## 分析
-
-1. 判断回文串，就用一次循环，两个游标，分别比对字符是否相等即可
-2. 题目要求 只考虑字母和数字字符。若发现其余的字符，跳过即可
-3. 时间复杂度O(N) 空间复杂度为O(1)
-
-## 总结
-1. 学会使用前后指针来分析解决问题
-2. char类型的大小比较是没有String中的equals()方法的
-3. A的ascii码值是65，a的ascii码值是97，小写字母比大写字母的ascii值大32
-
-## 解答
-
-````java
 import org.junit.Test;
+
+/**
+ * Created by song bing
+ * Created time 2020/3/6 10:32
+ */
 public class LeetCode125 {
 	@Test
 	public void test(){
@@ -88,14 +56,3 @@ public class LeetCode125 {
 		return num1 == num2;
 	}
 }
-
-````
-
-
-
-
-
-
-
-
-

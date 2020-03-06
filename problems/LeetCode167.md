@@ -1,6 +1,6 @@
 ---
 title: LeetCode167-有序数组的两数之和
-date: 2019-06-02
+date: 2020-03-06
 categories: 算法小白的刷题之路
 tags: LeetCode
 ---
@@ -38,38 +38,35 @@ int[] nums = {2, 7, 11, 15}; int target = 9;
 
 时间为0(N) 空间为O(1)
 
+## 总结
+1. 前面做过普通数组两数之和，现在这个题目多了一个有序
+2. 增加了有序这个特征，我们就可以用前后两个指针逼近的方式，不用额外空间
+
 ## 解答
 
 ````java
 import org.junit.Test;
-public class LeetCode167Test {
+public class LeetCode167 {
 
 	@Test
 	public void test(){
-		int[] nums = {2, 7, 11, 15};
-		int target = 9;
-		System.out.println(Arrays.toString(twoSum(nums,target)));
+		System.out.println(Arrays.toString(twoSum(new int[]{2,7,11,15},9)));
 	}
 
+	// 最优解法
 	public int[] twoSum(int[] numbers, int target) {
-		if(numbers == null || numbers.length < 2){
-			return new int[]{-1,-1};
-		}
-		int begin = 0;
-		int end = numbers.length - 1;
-		while (begin <= end){
-			if(numbers[begin] + numbers[end] == target){
-				return new int[]{begin+1,end+1};
-			}else if(numbers[begin] + numbers[end] > target){
-				// 大数大了，整体需要调小
-				end--;
+		int i = 0,j = numbers.length-1;
+		while (i < j){
+			if(numbers[i] + numbers[j] < target){
+				i++;
+			}else if(numbers[i] + numbers[j] > target){
+				j--;
 			}else{
-				begin++;
+				return new int[]{i+1,j+1};
 			}
 		}
 		return new int[]{-1,-1};
 	}
-	
 }
 
 

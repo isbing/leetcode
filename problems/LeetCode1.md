@@ -1,6 +1,6 @@
 ---
 title: LeetCode1-两数之和
-date: 2019-06-01
+date: 2020-03-06
 categories: 算法小白的刷题之路
 tags: LeetCode
 ---
@@ -20,16 +20,12 @@ tags: LeetCode
 
 ## 分析
 ### 暴力解
-这个解法应该是大家都能直接想到的。
-
-外层遍历这个数组，假如第一个数，然后从当前数的下一个开始循环相加 看是否等于给定值。
-
-第一次大循环结束，就开始第二个数 继续开始里层的循环
+这个解法应该是大家都能直接想到的。直接两层for循环，看两数相加是否等于target值
 
 两层循环暴力 空间为O(1) 时间O(n方)
 
 ### 优化解
-使用hashMap 根据key得到value 这个是比较效率的。O(1)
+使用hashMap 将每个数字以及对应的角标用map结构存储，遍历一个数字的时候，去map中找第二个数
 
 用 2 7 11 15 target=9 来分析。
 
@@ -39,24 +35,24 @@ tags: LeetCode
 
 用哈希表 空间为O(n) 时间O(n)
 
+## 总结
+1. 暴力解法是很容易想到的，优化思路一般都用空间换时间
+2. 两数之和，通过一轮循环可以确定一个数字，那么第二个数字就可以不再用循环了，去辅助表里面查
+3. map.containsKey(two) 这个时间复杂度为o(1)
+
 ## 解答
 
 ````java
 import org.junit.Test;
-public class LeetCode1Test {
-
+public class LeetCode1 {
 	@Test
 	public void test(){
-		int[] nums = {2, 7, 11, 15};
-		int target = 9;
-		System.out.println(Arrays.toString(twoSumBao(nums,target)));
-		System.out.println(Arrays.toString(twoSumYou(nums,target)));
+		System.out.println(Arrays.toString(twoSum_1(new int[]{2,7,11,15},9)));
+		System.out.println(Arrays.toString(twoSum_2(new int[]{2,7,11,15},9)));
 	}
 
-	public int[] twoSumBao(int[] nums, int target) {
-		if(nums == null || nums.length < 2){
-			return new int[]{-1,-1};
-		}
+	// 暴力解法 直接两层循环 搞定
+	public int[] twoSum_1(int[] nums, int target) {
 		for(int i=0; i<nums.length; i++){
 			for(int j=i+1; j<nums.length; j++){
 				if(nums[i] + nums[j] == target){
@@ -67,23 +63,22 @@ public class LeetCode1Test {
 		return new int[]{-1,-1};
 	}
 
-	public int[] twoSumYou(int[] nums, int target) {
-		if(nums == null || nums.length < 2){
-		    return new int[]{-1,-1};
-		}
-		Map<Integer,Integer> map = new HashMap<>();
+	// 优化解法，典型的空间换时间 key为num，value为index
+	public int[] twoSum_2(int[] nums, int target) {
+		HashMap<Integer,Integer> map = new HashMap<>();
 		for(int i=0; i<nums.length; i++){
-			int otherValue = target - nums[i];
-			if(map.containsKey(otherValue)){
-				return new int[]{map.get(otherValue),i};
+			int one = nums[i];
+			int two = target - one;
+			// 查看第二个值 是否在map中，如果在 就最好了，如果不在 将当前值以及角标放入map中
+			if(map.containsKey(two)){
+				return new int[]{map.get(two),i};
 			}else{
-				map.put(nums[i],i);
+				map.put(one,i);
 			}
 		}
 		return new int[]{-1,-1};
 	}
 }
-
 
 ````
 
