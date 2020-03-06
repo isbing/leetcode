@@ -1,6 +1,6 @@
 ---
 title: LeetCode240-搜索二维矩阵
-date: 2019-07-04
+date: 2020-03-06
 categories: 算法小白的刷题之路
 tags: LeetCode
 ---
@@ -57,45 +57,46 @@ tags: LeetCode
 
 时间O(M+N) 空间O(1) 最坏情况下 就是所有位置都游荡一遍
 
+## 总结
+1. 矩阵的边界异常情况的处理 matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0
+2. 矩阵的行列表示法，行= matrix.length；列=matrix[0].length
+3. 这个题目是有顺序的，从第一行最后一列的元素开始分析，发现新大陆
+
 ## 解答
 
 ````java
 import org.junit.Test;
-public class LeetCode240Test {
-	
-	public boolean searchMatrix(int[][] matrix, int target) {
-		if(matrix == null){
-			return false;
-		}
-		if(matrix.length == 0){
-			return false;
-		}
-		int[] temp = matrix[0];
-		if(temp == null){
-			return false;
-		}
-		if(temp.length == 0){
-			return false;
-		}
-		// 行数
-		int m = matrix.length;
-		// 列数
-		int n = matrix[0].length;
-		// 当前指针 指向第一排最后的那个数
-		int i = 0,j = n-1;
-		// 循环条件 就是 行列的限制在矩阵框框中
-		while (i < m && j >= 0){
-			if(matrix[i][j] > target){
-				j--;
-			}else if(matrix[i][j] < target){
-				i++;
-			}else{
-				return true;
+public class LeetCode240 {
+
+	// 暴力直接搜索
+	public boolean searchMatrix_1(int[][] matrix, int target) {
+		for(int m=0; m<matrix.length; m++){
+			for(int n=0; n<matrix[0].length; n++){
+				if(matrix[m][n] == target){
+					return true;
+				}
 			}
 		}
 		return false;
 	}
+
+	public boolean searchMatrix_2(int[][] matrix, int target) {
+		if(matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) return false;
+		// 行
+		int m = matrix.length;
+		// 列
+		int n = matrix[0].length;
+		// 定位到第一行最后一个元素
+		int i = 0, j = n-1;
+		while (i < m && j >= 0){
+			if(matrix[i][j] > target) j--;
+			else if(matrix[i][j] < target) i++;
+			else return true;
+		}
+		return false;
+	}
 }
+
 
 ````
 
