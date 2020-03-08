@@ -12,8 +12,8 @@
 | [**LeetCode125-判断回文串**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode125.md) | [**LeetCode1-两数之和**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode1.md) | [**LeetCode167-有序数组的两数之和**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode167.md) |
 | :----: | :----: | :----: |
 | [**LeetCode101-二叉树是否对称**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode101.md) | [**LeetCode136-单身数字**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode136.md) | [**LeetCode240-搜索二维矩阵**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode240.md) |
-| [**LeetCode100-二叉树是否相同**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode100.md) | [**LeetCode206-单链表反转**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode206.md) |  |
-|  |  |  |
+| [**LeetCode100-二叉树是否相同**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode100.md) | [**LeetCode206-单链表反转**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode206.md) | [**LeetCode9-回文数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode9.md) |
+| [**LeetCode234-回文链表**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode234.md) |  |  |
 |  |  |  |
 |  |  |  |
 
@@ -25,9 +25,9 @@
 
 [**LeetCode46-全排列**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode46.md)
 
-[**LeetCode9-回文数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode9.md)
 
-[**LeetCode234-回文链表**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode234.md)
+
+
 
 [**LeetCode88-合并两个有序数组**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode88.md)
 
