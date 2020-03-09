@@ -1,50 +1,18 @@
----
-title: LeetCode107-二叉树的逆层序遍历
-date: 2020-03-09
-categories: 算法小白的刷题之路
-tags: LeetCode
----
+package com.isbing.leetcode.coding;
 
-## 题目
-给定一个二叉树，返回其节点值自底向上的层次遍历。（即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
+import com.isbing.leetcode.bean.TreeNode;
 
-例如：
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
-给定二叉树 [3,9,20,null,null,15,7],
-
-```
-
-    3
-   / \
-  9  20
-    /  \
-   15   7
-   
-返回其自底向上的层次遍历为：
-
-[
-  [15,7],
-  [9,20],
-  [3]
-]
-```
-
-## 分析
-
-分析 二叉树的层序遍历 应该是 3，9 20，15 7
-
-此时打印的结果为    15 7，9 20，3       
-
-可以发现 不就是 层次遍历后得到的list 然后自己对折交换了一下么
-
-空间时间 都是O（N）
-
-## 解答
-
-````java
-import org.junit.Test;
+/**
+ * Created by songbing
+ * Created time 2020/3/10 上午12:02
+ */
 public class LeetCode107 {
-    
+
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if(root == null) return result;
@@ -75,16 +43,3 @@ public class LeetCode107 {
         return result;
     }
 }
-
-
-
-````
-
-
-
-
-
-
-
-
-
