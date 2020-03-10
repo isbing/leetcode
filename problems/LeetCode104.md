@@ -1,6 +1,6 @@
 ---
 title: LeetCode104-二叉树的最大深度
-date: 2019-07-09
+date: 2020-03-10
 categories: 算法小白的刷题之路
 tags: LeetCode
 ---
@@ -26,7 +26,7 @@ tags: LeetCode
 返回它的最大深度 3 
 ## 分析
 ### 递归
-递归 空节点 return 0，不是的话 返回左右字数的最大+1
+递归 空节点 return 0，不是的话 返回左右子数的最大+1
 
 Time: O(n), Space: O(n)
 
@@ -48,45 +48,46 @@ Time: O(n), Space: O(n)
 
 Time: O(n), Space: O(n)
 
+## 总结
+1. 二叉树的最大深度，递归和迭代两种方法实现
+2. 我觉得递归太抽象了，还是喜欢用迭代的方式，清晰易懂
+3. 使用队列，每进入一层，深度就+1，多容易懂
+
 ## 解答
 
 ````java
 import org.junit.Test;
-public class LeetCode104Test {
+public class LeetCode104 {
 
-	// 迭代
-	public int maxDepthV2(TreeNode root) {
+	// 用递归做，递归 空节点 return 0，不是的话 返回左右子数的最大+1
+	public int maxDepth_1(TreeNode root) {
+		return maxDepth_1_di(root);
+	}
+
+	private int maxDepth_1_di(TreeNode root) {
 		if(root == null) return 0;
-		// 构造一个队列 用于层次遍历
+		return Math.max(maxDepth_1_di(root.left),maxDepth_1_di(root.right)) + 1;
+	}
+
+	// 用迭代做，使用队列，层次遍历，每进入一层，深度就+1
+	public int maxDepth_2(TreeNode root) {
+		if(root == null) return 0;
 		Queue<TreeNode> queue = new LinkedList<>();
-		// 根节点入队
 		queue.add(root);
 		int depth = 0;
 		while (!queue.isEmpty()){
-			// 得到当前队列的大小
+			// 进入一层，depth就++
+			depth++;
 			int size = queue.size();
 			for(int i=0; i<size; i++){
 				TreeNode node = queue.poll();
-				if(node.left != null){
-					queue.add(node.left);
-				}
-				if(node.right != null){
-					queue.add(node.right);
-				}
+				if(node.left != null) queue.add(node.left);
+				if(node.right != null) queue.add(node.right);
 			}
-			depth++;
 		}
 		return depth;
 	}
-
-
-	// 递归
-	public int maxDepth(TreeNode root) {
-		if(root == null) return 0;
-		return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
-	}
 }
-
 
 ````
 
