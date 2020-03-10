@@ -1,6 +1,6 @@
 ---
 title: LeetCode704-二分查找
-date: 2019-07-17
+date: 2020-03-10
 categories: 算法小白的刷题之路
 tags: LeetCode
 ---
@@ -36,61 +36,51 @@ tags: LeetCode
 
 Time: O(log(n)), Space: O(1)
 
+## 总结
+1. 二分查找有递归、非递归两种方式。很基础的东西
+2. Time: O(log(n)), Space: O(1)
+
 ## 解答
 
 ````java
 import org.junit.Test;
-public class LeetCode704Test {
+public class LeetCode704 {
 
-	@Test
-	public void tt(){
-		int[] nums = {-1,0,3,5,9,12};
-		System.out.println(search_1(nums,9));
-		System.out.println(search_2(nums,9));
-	}
-
-	// 非递归
+	// 二分查找 迭代法 直接都能默写出来的基础算法
 	public int search_1(int[] nums, int target) {
-		if(nums == null) return -1;
-		int low = 0;
-		int high = nums.length-1;
-
+		int low = 0, high = nums.length-1;
 		while (low <= high){
-			int mid = low + (high-low)/2;
-			if(nums[mid] == target){
-				return mid;
+			int mid = high - (high-low)/2;
+			if(nums[mid] > target){
+				high = mid - 1;
 			}else if(nums[mid] < target){
-				low = mid+1;
+				low = low + 1;
 			}else{
-				high = mid-1;
+				return mid;
 			}
 		}
 		return -1;
 	}
 
-
-	// 递归
+	// 二分查找 递归法 直接都能默写出来的基础算法
 	public int search_2(int[] nums, int target) {
-		if(nums == null) return -1;
-		int low = 0;
-		int high = nums.length-1;
-		return diGui(nums,target,low,high);
+		return search_2_di(nums,target,0,nums.length-1);
 	}
 
-	private int diGui(int[] nums, int target, int low, int high) {
-		// 递归的结束条件
-		if(low > high){
-			return -1;
-		}
-		int mid = low + (high - low) / 2;
-		if(nums[mid] == target){
-			return mid;
+	private int search_2_di(int[] nums, int target, int low, int high) {
+		if(low > high) return -1;
+		int mid = high - (high-low)/2;
+		if(nums[mid] > target){
+			high = mid - 1;
+			return search_2_di(nums,target,low,high);
 		}else if(nums[mid] < target){
-			return diGui(nums,target,mid+1,high);
+			low = low + 1;
+			return search_2_di(nums,target,low,high);
 		}else{
-			return diGui(nums,target,low,mid-1);
+			return mid;
 		}
 	}
+
 }
 
 

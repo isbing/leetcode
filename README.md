@@ -15,7 +15,7 @@
 | [**LeetCode100-二叉树是否相同**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode100.md) | [**LeetCode206-单链表反转**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode206.md) | [**LeetCode9-回文数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode9.md) |
 | [**LeetCode234-回文链表**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode234.md) | [**LeetCode88-合并两个有序数组**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode88.md) | [**LeetCode21-合并两个有序链表**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode21.md) |
 | [**LeetCode102-二叉树的层序遍历**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode102.md) | [**LeetCode107-二叉树的逆层序遍历**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode107.md) | [**LeetCode104-二叉树的最大深度**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode104.md) |
-| [**LeetCode111-二叉树的最小深度**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode111.md) |  |  |
+| [**LeetCode111-二叉树的最小深度**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode111.md) | [**LeetCode2-链表中的两数相加**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode2.md) | [**LeetCode704-二分查找**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode704.md) |
 |  |  |  |
 |  |  |  |
 
@@ -29,10 +29,6 @@
 [**LeetCode141-链表是否有环**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode141.md)
 
 
-
-
-
-
 [**LeetCode110-二叉树是否平衡**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode110.md)
 
 [**LeetCode226-二叉树的翻转**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode226.md)
@@ -42,8 +38,6 @@
 [**LeetCode263-丑数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode263.md)
 
 [**LeetCode169-数组中出现次数大于⌊n/2⌋的元素**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode169.md)
-
-[**LeetCode2-链表中的两数相加**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode2.md)
 
 [**LeetCode203-单链表删除指定节点**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode203.md)
 
@@ -55,7 +49,7 @@
 
 [**LeetCode647-回文子串的个数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode647.md)
 
-[**LeetCode704-二分查找**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode704.md)
+
 
 [**LeetCode50-数值的N次方**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode50.md)
 
