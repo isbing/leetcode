@@ -1,6 +1,6 @@
 ---
 title: LeetCode111-二叉树的最小深度
-date: 2019-07-10
+date: 2020-03-10
 categories: 算法小白的刷题之路
 tags: LeetCode
 ---
@@ -54,58 +54,38 @@ val  val   说明左右孩子都有，min(f(left),f(right))+1
 
 时间空间都是O(N)
 
+## 总结
+1. 还是用迭代的思路吧，使用队列，只要发现叶子节点，最小深度值就出来了，这个思路不比递归香吗？清爽的不得鸟
+
 ## 解答
 
 ````java
 import org.junit.Test;
-public class LeetCode111Test {
+public class LeetCode111 {
 
-	// 迭代
-	public int minDepthV2(TreeNode root) {
+	// 二叉树的最小深度，我就不用递归实现了 就用迭代实现
+	// 递归我真是难以理解...
+	public int minDepth(TreeNode root) {
+		// 最小深度 用队列，只要出队的元素中出现叶子节点就可以返回了
 		if(root == null) return 0;
 		Queue<TreeNode> queue = new LinkedList<>();
 		queue.add(root);
-		// 初始化深度为1
-		int depth = 1;
+		int minDepth = 0;
 		while (!queue.isEmpty()){
+			// 每进入一层，深度就++
+			minDepth++;
 			int size = queue.size();
 			for(int i=0; i<size; i++){
 				TreeNode node = queue.poll();
-				// 只要是叶子节点 直接返回深度
-				if(node.left == null && node.right == null){
-					return depth;
-				}
-				if(node.left != null){
-					queue.add(node.left);
-				}
-				if(node.right != null){
-					queue.add(node.right);
-				}
+				if(node.left == null && node.right == null) return minDepth;
+				if(node.left != null) queue.add(node.left);
+				if(node.right != null) queue.add(node.right);
 			}
-			depth++;
 		}
-		return depth;
+		return 0;
 	}
 
-	// 递归
-	public int minDepth(TreeNode root) {
-		if(root == null){
-			return 0;
-		}
-		if(root.left == null && root.right == null){
-			return 1;
-		}
-		// 左孩子为空
-		if(root.left == null){
-			return minDepth(root.right)+1;
-		}
-		if(root.right == null){
-			return minDepth(root.left)+1;
-		}
-		return Math.min(minDepth(root.left),minDepth(root.right))+1;
-	}
 }
-
 
 ````
 
