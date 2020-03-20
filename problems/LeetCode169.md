@@ -1,6 +1,6 @@
 ---
 title: LeetCode169-数组中出现次数大于⌊n/2⌋的元素
-date: 2019-07-11
+date: 2020-03-20
 categories: 算法小白的刷题之路
 tags: LeetCode
 ---
@@ -47,80 +47,75 @@ tags: LeetCode
 时间O(N) 空间O(N)
 
 ### 优美解
-可以采用 摩尔投票算法，跟连续子序列最大和一样的思路。比较消除的思路
+比较消除的思路，因为数组中一定会存在一个众数，2 2 3 3 2，比如这样的 比较消除之后，一定还会存在一个数
 
 3 2 3 3
 
-首先当前值为3 出现次数为1.
-
-下次循环 当前值为2 2!=3 出现次数1-1=0 当为0之后，
-
-为0之后 就可以重置 当前值为3 出现次数为1
-
-下次循环 当前值为3 相同就+1.。最后返回的就是 当前值
+1. key=0，count=0,第一次循环 遍历到3 当发现count为0时 初始化为1，key指向这个元素
+2. 第二次循环 遍历到 2 count-1=1-1=0
+3. 第三次循环 遍历到 3, 当发现count为0 初始化为1，每次初始化的时候，key才变动
+4. 第四次循环 遍历到3 count++，最后返回最后存在的数字即可
 
 Time: O(n), Space: O(1)
+
+## 总结
+1. 一个数组中返回出现次数一半的元素，用hashMap，每个数字对应的出现次数存储在map，然后比较谁的value到 时间空间都为o(n)
+2. 第二种方法，因为题目中规定了数组中一定会存在这样的数字，可以用比较消除法，相同++，不同--，时间为o(n) 空间为o(1)
 
 ## 解答
 
 ````java
 import org.junit.Test;
-public class LeetCode169Test {
-
+public class LeetCode169 {
 	@Test
-	public void tt(){
-		int[] nums = {2,2,1,1,1,2,2};
-		System.out.println(majorityElement(nums));
-		System.out.println(majorityElementV2(nums));
+	public void test(){
+		System.out.println(majorityElement_1(new int[]{3,2,3,3}));
+		System.out.println(majorityElement_2(new int[]{3,2,3,3}));
 	}
 
-	// 时间0(N)  空间0(N)
-	public int majorityElement(int[] nums) {
-		if(nums == null) return 0;
-		Map<Integer,Integer> map = new HashMap<>();
-		for(int num : nums){
-			if(map.containsKey(num)){
-				map.put(num,map.get(num)+1);
-			}else{ // 不存在 次数为1
-				map.put(num,1);
-			}
-		}
-		int maxCount = 0;
-		int maxCountKey = 0;
-		// 遍历这个map
-		for(Map.Entry<Integer,Integer> entry : map.entrySet()){
-			if(entry.getValue() > maxCount){
-				maxCount = entry.getValue();
-				maxCountKey = entry.getKey();
-			}
-		}
-		return maxCountKey;
-	}
-
-	// 时间0(N)  空间0(1)
-	public int majorityElementV2(int[] nums) {
-		if(nums == null) return 0;
-		// 摩尔投票算法  2,1,2,1,1,2,2
-		// 初始化 就是指向第一个数字
-		int maxCount = 1;
-		int maxCountKey = nums[0];
-		for(int i=1; i<nums.length; i++){
-			if(maxCount <= 0){
-				// 重新开始取
-				maxCountKey = nums[i];
-				maxCount = 1;
+	// 哈希表法，时间o(n) 空间o(n)
+	public int majorityElement_1(int[] nums) {
+		HashMap<Integer,Integer> map = new HashMap<>();
+		for(int i=0; i<nums.length; i++){
+			int key = nums[i];
+			if(map.containsKey(key)){
+				map.put(key,map.get(key) + 1);
 			}else{
-				// 相同 次数+1 不相同次数-1
-				if(maxCountKey == nums[i]){
-					maxCount++;
-				}else{
-					maxCount--;
-				}
+				map.put(key,1);
 			}
 		}
-		return maxCountKey;
+		// 将每个数字对应的出现出现都存储到map中了，然后找出最大的value值
+		int maxValue = Integer.MIN_VALUE;
+		int maxKey = Integer.MIN_VALUE;
+		for(Map.Entry<Integer,Integer> entry : map.entrySet()){
+			Integer key = entry.getKey();
+			Integer value = entry.getValue();
+			if(maxValue < value){
+				maxValue = value;
+				maxKey = key;
+			}
+		}
+		return maxKey;
 	}
+
+	// 摩尔投票算法 比较消除 时间o(n) 空间o(1)
+	public int majorityElement_2(int[] nums) {
+		int count = 0, key = 0;
+		for(int i=0; i<nums.length; i++){
+			// 当发现count为0的时候 就要初始化了
+			if(count == 0){
+				count = 1;
+				key = nums[i];
+			}else{
+				if(key == nums[i]) count++;
+				else count--;
+			}
+		}
+		return key;
+	}
+
 }
+
 
 
 ````

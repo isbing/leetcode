@@ -16,9 +16,10 @@
 | [**LeetCode234-回文链表**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode234.md) | [**LeetCode88-合并两个有序数组**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode88.md) | [**LeetCode21-合并两个有序链表**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode21.md) |
 | [**LeetCode102-二叉树的层序遍历**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode102.md) | [**LeetCode107-二叉树的逆层序遍历**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode107.md) | [**LeetCode104-二叉树的最大深度**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode104.md) |
 | [**LeetCode111-二叉树的最小深度**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode111.md) | [**LeetCode2-链表中的两数相加**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode2.md) | [**LeetCode704-二分查找**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode704.md) |
-| [**LeetCode141-链表是否有环**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode141.md) |  |  |
+| [**LeetCode141-链表是否有环**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode141.md) | [**LeetCode169-数组中出现次数大于⌊n/2⌋的元素**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode169.md) |  |
 |  |  |  |
-
+|  |  |  |
+|  |  |  |
 
 
 [**LeetCode46-全排列**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode46.md)
@@ -37,7 +38,7 @@
 
 [**LeetCode263-丑数**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode263.md)
 
-[**LeetCode169-数组中出现次数大于⌊n/2⌋的元素**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode169.md)
+
 
 [**LeetCode203-单链表删除指定节点**](https://github.com/isbing/leetcode/blob/master/problems/LeetCode203.md)
 
